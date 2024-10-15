@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="-243dp">
+
+        <EditText
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Entrez une valeur"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.562"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Entrez une  valeur"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.567"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text1" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text2">
+
+            <RadioButton
+                android:id="@+id/Plus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Plus" />
+
+            <RadioButton
+                android:id="@+id/Moins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Moins" />
+
+            <RadioButton
+                android:id="@+id/multiplier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Multiplier" />
+
+            <RadioButton
+                android:id="@+id/diviser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diviser" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/resultat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Résultat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        <Button
+            android:id="@+id/Raz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Raz"
+            app:layout_constraintBottom_toTopOf="@+id/quitter"
+            app:layout_constraintEnd_toStartOf="@+id/égal"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resultat" />
+
+        <Button
+            android:id="@+id/égal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="="
+            app:layout_constraintBottom_toTopOf="@+id/quitter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/Raz"
+            app:layout_constraintTop_toBottomOf="@+id/resultat" />
+
+        <Button
+            android:id="@+id/quitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="120dp"
+            android:text="Quitter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
