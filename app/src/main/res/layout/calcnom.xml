@@ -58,20 +58,20 @@
                 android:text="Moins" />
 
             <RadioButton
-                android:id="@+id/multiplier"
+                android:id="@+id/Multiplier"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Multiplier" />
 
             <RadioButton
-                android:id="@+id/diviser"
+                android:id="@+id/Diviser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Diviser" />
         </RadioGroup>
 
         <TextView
-            android:id="@+id/resultat"
+            android:id="@+id/Résultat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -89,7 +89,7 @@
             app:layout_constraintEnd_toStartOf="@+id/égal"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/resultat" />
+            app:layout_constraintTop_toBottomOf="@+id/Résultat" />
 
         <Button
             android:id="@+id/égal"
@@ -100,7 +100,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/Raz"
-            app:layout_constraintTop_toBottomOf="@+id/resultat" />
+            app:layout_constraintTop_toBottomOf="@+id/Résultat" />
 
         <Button
             android:id="@+id/quitter"
@@ -111,6 +111,17 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/copyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="copyrigth Max Pochet 2024/2025"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quitter"
+            app:layout_constraintVertical_bias="0.455" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

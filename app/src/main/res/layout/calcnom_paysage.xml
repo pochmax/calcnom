@@ -10,7 +10,7 @@
         android:layout_width="160dp"
         android:layout_height="26dp"
         android:hint="Veuillez entrer une valeur"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toStartOf="@+id/text2"
         app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Veuillez entrer une valeur"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,37 +29,93 @@
         app:layout_constraintVertical_bias="0.525" />
 
     <RadioGroup
-        android:id="@+id/radioGroup2"
+        android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
-            android:id="@+id/plus"
+            android:id="@+id/Plus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="plus" />
 
         <RadioButton
-            android:id="@+id/moins"
+            android:id="@+id/Moins"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="moins" />
 
         <RadioButton
-            android:id="@+id/multiplier"
+            android:id="@+id/Multiplier"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="multiplier" />
 
         <RadioButton
-            android:id="@+id/diviser"
+            android:id="@+id/Diviser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="diviser" />
     </RadioGroup>
+
+    <TextView
+        android:id="@+id/Résultat"
+        android:layout_width="63dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="32dp"
+        android:text="Resultat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <Button
+        android:id="@+id/Raz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Raz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/égal"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Résultat" />
+
+    <Button
+        android:id="@+id/égal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/quitter"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Raz"
+        app:layout_constraintTop_toBottomOf="@+id/Résultat" />
+
+    <Button
+        android:id="@+id/quitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quitter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/égal"
+        app:layout_constraintTop_toBottomOf="@+id/Résultat" />
+
+    <TextView
+        android:id="@+id/copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="copyrigth Max Pochet 2024/2025"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/égal"
+        app:layout_constraintVertical_bias="0.652" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.calcnom1;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,15 +27,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.calcnom);
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            setContentView(R.layout.calcnom_paysage); // Utilise calcom_paysage.xml pour paysage
+        } else {
+            setContentView(R.layout.calcnom); // Utilise activity_main.xml pour portrait
+        }
+
         text1 = findViewById(R.id.text1);
         text2 = findViewById(R.id.text2);
-        resultat = findViewById(R.id.resultat);
+        resultat = findViewById(R.id.Résultat);
         radioGroup = findViewById(R.id.radioGroup);
         plus = findViewById(R.id.Plus);
         moins = findViewById(R.id.Moins);
-        multiplier = findViewById(R.id.multiplier);
-        diviser = findViewById(R.id.diviser);
+        multiplier = findViewById(R.id.Multiplier);
+        diviser = findViewById(R.id.Diviser);
         egal = findViewById(R.id.égal);
         raz = findViewById(R.id.Raz);
         quitter = findViewById(R.id.quitter);
@@ -68,9 +74,9 @@ public class MainActivity extends AppCompatActivity {
             result = number1 + number2;
         } else if (selectedOperation == R.id.Moins) {
             result = number1 - number2;
-        } else if (selectedOperation == R.id.multiplier) {
+        } else if (selectedOperation == R.id.Multiplier) {
             result = number1 * number2;
-        } else if (selectedOperation == R.id.diviser) {
+        } else if (selectedOperation == R.id.Diviser) {
             if (number2 != 0) {
                 result = number1 / number2;
             } else {
