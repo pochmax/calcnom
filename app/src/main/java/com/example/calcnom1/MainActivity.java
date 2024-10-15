@@ -26,12 +26,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            setContentView(R.layout.calcnom_paysage); // Utilise calcom_paysage.xml pour paysage
-        } else {
-            setContentView(R.layout.calcnom); // Utilise activity_main.xml pour portrait
-        }
+        setContentView(R.layout.calcnom); // Utilise activity_main.xml pour portrait
+
 
         text1 = findViewById(R.id.text1);
         text2 = findViewById(R.id.text2);
